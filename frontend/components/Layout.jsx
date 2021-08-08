@@ -1,21 +1,21 @@
-import Header from './Header';
-import Footer from './Footer';
-const Layout = ({children}) => {
-    const user = true;
-    return (
+import Header from "./Header";
+import Footer from "./Footer";
+import Signin from "../pages/signin";
+const Layout = ({ children }) => {
+  const user = true;
+  return (
+    <>
+      {user ? (
+        <Signin />
+      ) : (
         <>
-        {/* {
-         user ? <h1>please login</h1> :
-        (
-            <>
-        <Header/>
-        {children}
-        <Footer/>
+          <Header />
+          {children}
+          <Footer />
         </>
-        )
-        } */}
-        </>
-    )
-}
+      )}
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
